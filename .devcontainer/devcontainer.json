@@ -1,0 +1,17 @@
+{
+  "name": "Python Project",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11-trixie",
+  
+  // ここで拡張機能を指定！
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",      // Python本体
+        "ms-python.vscode-pylance" // 高性能な補完
+      ]
+    }
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {}
+  }
+}
