@@ -1,17 +1,11 @@
 {
-  "name": "Python Project",
-  "image": "mcr.microsoft.com/devcontainers/python:3.11-trixie",
-  
-  // ここで拡張機能を指定！
-  "customizations": {
-    "vscode": {
-      "extensions": [
-        "ms-python.python",      // Python本体
-        "ms-python.vscode-pylance" // 高性能な補完
-      ]
-    }
-  },
-  "features": {
-    "ghcr.io/devcontainers/features/git:1": {}
-  }
+    "name": "apt-gpg-debug",
+    "image": "mcr.microsoft.com/devcontainers/python:3.11-trixie",
+    "remoteUser": "root",
+    "features": {
+        "ghcr.io/devcontainers/features/git:1": {}
+    },
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/apt-gpg-debug,type=bind,consistency=cached",
+    "workspaceFolder": "/workspaces/apt-gpg-debug",
+    "postCreateCommand": "bash /workspaces/apt-gpg-debug/.devcontainer/setup.sh"
 }
